@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2"/>
+    </startup>
+  <sokocd val='MNR'></sokocd>
+  <search kensu="1000"></search>
+  <rndflg>
+  	<col>I,J,R,M,N</col>
+	<set>HAISONO,ZNKFLG,BIKO,SKYHINSYUCD,SKYHINSYUNM</set>
+  </rndflg>
+  <connectionStrings>
+    <connectionString>Data Source=MITSUNORI;User Id=MNR01;Password=MNR01;</connectionString>
+  </connectionStrings>
+</configuration>
