@@ -21,14 +21,44 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_12C755FDDE4049848D5A58DC57568384"
+        "MsmKey" = "8:_109098756C36B220CF274C871B2CF700"
+        "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_114DF5B36DCC4B2789ADA60B277119DA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_566F4DAB587D43BC90FC92F637FD6AD1"
+        "MsmKey" = "8:_2477193BB0AE4F3BAEABB645392092B3"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6BB596B618574DFABC3331947D981DF1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7770047D8EB3ED44EA8FCEACE18ED47B"
+        "OwnerKey" = "8:_CD01B9A72FF6EDCDD96364BC2AF2D8E2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7770047D8EB3ED44EA8FCEACE18ED47B"
+        "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7770047D8EB3ED44EA8FCEACE18ED47B"
+        "OwnerKey" = "8:_8D392369AB8CF4F45E230DB81E534214"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,25 +69,37 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_8674F1DC09DD4A11BCE74B501D48A6C5"
+        "MsmKey" = "8:_8D392369AB8CF4F45E230DB81E534214"
+        "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A535B9E1CC0F45F588B6D65D554F558D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8D78AE844AE44F7D998D3F8B9F890DAE"
+        "MsmKey" = "8:_CD01B9A72FF6EDCDD96364BC2AF2D8E2"
+        "OwnerKey" = "8:_8D392369AB8CF4F45E230DB81E534214"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CD01B9A72FF6EDCDD96364BC2AF2D8E2"
+        "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DFD613F3BAC34C55BB72E00599204B1D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D6554681875F4892A1FE41D8CB127733"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FDFA61531F334E4782D60C2DEF085F48"
+        "MsmKey" = "8:_FA8EB1180AC7413EB75B8D8514D22C58"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -65,6 +107,30 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_109098756C36B220CF274C871B2CF700"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8D392369AB8CF4F45E230DB81E534214"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CD01B9A72FF6EDCDD96364BC2AF2D8E2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7770047D8EB3ED44EA8FCEACE18ED47B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -162,9 +228,40 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_12C755FDDE4049848D5A58DC57568384"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_109098756C36B220CF274C871B2CF700"
             {
-            "SourcePath" = "8:..\\Mitsunori\\bin\\Mitsui.xml"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_109098756C36B220CF274C871B2CF700"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_748BFAE08BFF415280E16F41499AE643"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_114DF5B36DCC4B2789ADA60B277119DA"
+            {
+            "SourcePath" = "8:..\\Mitsunori\\bin\\x64\\Mitsui.xml"
             "TargetName" = "8:Mitsui.xml"
             "Tag" = "8:"
             "Folder" = "8:_56041A69DE144E4C928BC17287D1E8D9"
@@ -182,9 +279,9 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_566F4DAB587D43BC90FC92F637FD6AD1"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2477193BB0AE4F3BAEABB645392092B3"
             {
-            "SourcePath" = "8:..\\Mitsunori\\bin\\Debug\\template\\集約.xlsx"
+            "SourcePath" = "8:..\\Mitsunori\\bin\\x64\\Debug\\template\\集約.xlsx"
             "TargetName" = "8:集約.xlsx"
             "Tag" = "8:"
             "Folder" = "8:_E372121CB8DC4AAE91C188825D510889"
@@ -200,6 +297,57 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6BB596B618574DFABC3331947D981DF1"
+            {
+            "SourcePath" = "8:..\\Mitsunori\\bin\\x64\\Debug\\template\\運賃計算.xlsx"
+            "TargetName" = "8:運賃計算.xlsx"
+            "Tag" = "8:"
+            "Folder" = "8:_E372121CB8DC4AAE91C188825D510889"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7770047D8EB3ED44EA8FCEACE18ED47B"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_7770047D8EB3ED44EA8FCEACE18ED47B"
+                    {
+                    "Name" = "8:log4net.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:log4net.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_748BFAE08BFF415280E16F41499AE643"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7E2B68440E6F40D280DC9C377D4508BC"
@@ -222,9 +370,35 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8674F1DC09DD4A11BCE74B501D48A6C5"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8D392369AB8CF4F45E230DB81E534214"
             {
-            "SourcePath" = "8:..\\Mitsunori\\bin\\Debug\\template\\集荷表.xlsx"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:BLL.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_748BFAE08BFF415280E16F41499AE643"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A535B9E1CC0F45F588B6D65D554F558D"
+            {
+            "SourcePath" = "8:..\\Mitsunori\\bin\\x64\\Debug\\template\\集荷表.xlsx"
             "TargetName" = "8:集荷表.xlsx"
             "Tag" = "8:"
             "Folder" = "8:_E372121CB8DC4AAE91C188825D510889"
@@ -242,12 +416,18 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8D78AE844AE44F7D998D3F8B9F890DAE"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CD01B9A72FF6EDCDD96364BC2AF2D8E2"
             {
-            "SourcePath" = "8:..\\Mitsunori\\bin\\Debug\\template\\運賃計算.xlsx"
-            "TargetName" = "8:運賃計算.xlsx"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:DAL.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_E372121CB8DC4AAE91C188825D510889"
+            "Folder" = "8:_748BFAE08BFF415280E16F41499AE643"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -259,33 +439,33 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D6554681875F4892A1FE41D8CB127733"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DFD613F3BAC34C55BB72E00599204B1D"
             {
-            "SourcePath" = "8:..\\Mitsunori\\bin\\Debug\\template\\配車依頼表フォーム_yyyymmdd.xlsx"
-            "TargetName" = "8:配車依頼表フォーム_yyyymmdd.xlsx"
-            "Tag" = "8:"
-            "Folder" = "8:_E372121CB8DC4AAE91C188825D510889"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FDFA61531F334E4782D60C2DEF085F48"
-            {
-            "SourcePath" = "8:..\\Mitsunori\\bin\\Debug\\template\\送り状兼受領書.xlsx"
+            "SourcePath" = "8:..\\Mitsunori\\bin\\x64\\Debug\\template\\送り状兼受領書.xlsx"
             "TargetName" = "8:送り状兼受領書.xlsx"
+            "Tag" = "8:"
+            "Folder" = "8:_E372121CB8DC4AAE91C188825D510889"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA8EB1180AC7413EB75B8D8514D22C58"
+            {
+            "SourcePath" = "8:..\\Mitsunori\\bin\\x64\\Debug\\template\\配車依頼表フォーム_yyyymmdd.xlsx"
+            "TargetName" = "8:配車依頼表フォーム_yyyymmdd.xlsx"
             "Tag" = "8:"
             "Folder" = "8:_E372121CB8DC4AAE91C188825D510889"
             "Condition" = "8:"
