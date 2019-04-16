@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Data.OleDb;
 using System.Text;
 using System.Windows.Forms;
@@ -91,10 +92,10 @@ namespace Mitsunori
         }
 
         //check if there are multiple status selected
-        private bool StatusCheck(string status)
+        private bool StatusCheck(string[] statusList)
         {
-            bool result = true;
             HashSet<string> ts = new HashSet<string>();
+            List<string> status = statusList.ToList();
             string message = "ステータスをチェックしてください。";
 
             for (int i = 0; i < GR_LIST.RowCount; i++)
@@ -104,13 +105,15 @@ namespace Mitsunori
                     ts.Add(GR_LIST.Rows[i].Cells["CODE1"].Value.ToString());
                 }
             }
-            if (ts.Count != 1 || !ts.Contains(status))
+            foreach(string a in ts)
             {
-                result = false;
-                MessageBox.Show(message, " Waring", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                if (!status.Contains(a))
+                {
+                    MessageBox.Show(message, " Waring", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
             }
-            return result;
+            return true;
         }
 
         //Attemp to delete the selected data shown in the gridview, physically in Oracle
@@ -192,7 +195,7 @@ namespace Mitsunori
         //Read Syukahyo info from oracle and output an excel file
         private void B_SYUKAHYO_Click(object sender, EventArgs e)
         {
-            if (GrdCheck() != 0 && StatusCheck("未処理") == true)
+            if (GrdCheck() != 0 && StatusCheck(new string[] { "未処理", "集荷表", "集約" }) == true)
             {
                 DataGridView gr = GR_LIST;
                 bool ZanKa = CH_ZANKA.Checked;
@@ -214,7 +217,7 @@ namespace Mitsunori
         //Read Okurijyo info from oracle and output an excel file
         private void B_OKURIJYO_Click(object sender, EventArgs e)
         {
-            if (GrdCheck() != 0)
+            if (GrdCheck() != 0 && StatusCheck(new string[] { "集荷表", "集約", "配送済", "運賃計算", "実績送信済" }) == true)
             {
                 DataGridView gr = GR_LIST;
 
@@ -235,7 +238,7 @@ namespace Mitsunori
         //Read Haiso info from oracle and output an excel file
         private void B_HAISODOWNLOAD_Click(object sender, EventArgs e)
         {
-            if (GrdCheck() != 0 )
+            if (GrdCheck() != 0 && StatusCheck(new string[] { "集約", "配送済", "運賃計算", "実績送信済" }) == true)
             {
 
                 bool ZanKa = CH_ZANKA.Checked;
@@ -256,7 +259,7 @@ namespace Mitsunori
         //Compute Unchin info and update the database with unchin
         private void B_UNCHINCAL_Click(object sender, EventArgs e)
         {
-            if (GrdCheck() != 0 && StatusCheck("集約") == true)
+            if (GrdCheck() != 0 && StatusCheck(new string[] { "配送済", "運賃計算" }) == true)
             {
                 DialogResult myResult;
 
@@ -277,7 +280,7 @@ namespace Mitsunori
         //Read Unchin info from oracle and output an excel file
         private void B_UNCHINDOWNLOAD_Click(object sender, EventArgs e)
         {
-            if (GrdCheck() != 0 && StatusCheck("計算") == true)
+            if (GrdCheck() != 0 && StatusCheck(new string[] { "運賃計算", "実績送信済" }) == true)
             {
                 bool ZanKa = CH_ZANKA.Checked;
                 if (ZanKa)
@@ -492,7 +495,7 @@ namespace Mitsunori
         //Read Syuyaku info from oracle and output an excel file
         private void B_SYKDOWNLOAD_Click(object sender, EventArgs e)
         {
-            if (GrdCheck() != 0)
+            if (GrdCheck() != 0 && StatusCheck(new string[] { "未処理", "集荷表", "集約" }) == true)
             {
                 object Area = CB_AREA.SelectedValue;
 

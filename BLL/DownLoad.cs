@@ -262,13 +262,13 @@ namespace BLL
 
                 if (Status5)
                 {
-                    sqlWhere.Add("STATUS=" + '4');
+                    sqlWhere.Add("STATUS=" + '5');
                 }
 
                 if (Status7)
                 {
                     unchinFlg = true;
-                    sqlWhere.Add("STATUS=" + '5');
+                    sqlWhere.Add("STATUS=" + '4');
                 }
 
                 if (Status6)
