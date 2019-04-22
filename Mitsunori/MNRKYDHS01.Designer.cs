@@ -712,6 +712,7 @@
             // myCheckBoxColumn
             // 
             this.myCheckBoxColumn.DataPropertyName = "myCheckBoxColumn";
+            this.myCheckBoxColumn.Frozen = true;
             this.myCheckBoxColumn.HeaderText = "";
             this.myCheckBoxColumn.Name = "myCheckBoxColumn";
             this.myCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -721,6 +722,7 @@
             // CODE1
             // 
             this.CODE1.DataPropertyName = "CODE1";
+            this.CODE1.Frozen = true;
             this.CODE1.HeaderText = "ステータス";
             this.CODE1.MaxInputLength = 3;
             this.CODE1.Name = "CODE1";
@@ -733,6 +735,7 @@
             dataGridViewCellStyle2.Format = "d";
             dataGridViewCellStyle2.NullValue = null;
             this.SYUKABI.DefaultCellStyle = dataGridViewCellStyle2;
+            this.SYUKABI.Frozen = true;
             this.SYUKABI.HeaderText = "出荷日";
             this.SYUKABI.MaxInputLength = 10;
             this.SYUKABI.Name = "SYUKABI";
@@ -745,6 +748,7 @@
             dataGridViewCellStyle3.Format = "d";
             dataGridViewCellStyle3.NullValue = null;
             this.NOUKIBI.DefaultCellStyle = dataGridViewCellStyle3;
+            this.NOUKIBI.Frozen = true;
             this.NOUKIBI.HeaderText = "納入日";
             this.NOUKIBI.MaxInputLength = 10;
             this.NOUKIBI.Name = "NOUKIBI";
@@ -754,6 +758,7 @@
             // CHIKUCD
             // 
             this.CHIKUCD.DataPropertyName = "CHIKUCD";
+            this.CHIKUCD.Frozen = true;
             this.CHIKUCD.HeaderText = "着地";
             this.CHIKUCD.Name = "CHIKUCD";
             this.CHIKUCD.ReadOnly = true;
@@ -762,6 +767,7 @@
             // DENPYONO
             // 
             this.DENPYONO.DataPropertyName = "DENPYONO";
+            this.DENPYONO.Frozen = true;
             this.DENPYONO.HeaderText = "ORDERNO";
             this.DENPYONO.MaxInputLength = 45;
             this.DENPYONO.Name = "DENPYONO";
