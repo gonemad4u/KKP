@@ -17,7 +17,7 @@ namespace BLL
        (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         //Create the Excel file from dataset
-        public void SyuKa(DataSet ds,string SOKOCD)
+        public void SyuKa(DataTable ds,string SOKOCD)
         {
             string saveFileName = "集荷表_" + SOKOCD + "_"+ DateTime.Now.ToString ("yyyyMMddHHmmss");           
             string templetFile = @"template\集荷表.xlsx";
@@ -40,7 +40,7 @@ namespace BLL
                 try
                 {
                     log.Info("EXEC BEGIN");
-                    var distinctIds = ds.Tables[0].AsEnumerable()
+                    var distinctIds = ds.AsEnumerable()
                      .Select(s => new
                      {
                          area = s.Field<string>("AREANM"),
@@ -58,7 +58,7 @@ namespace BLL
                             DataRow[] foundRows;
                             expression = "AREANM = '" + a.area.ToString() + "' AND SOKONM = '" + a.soko.ToString() + "'"/* + " AND SYUKABI = '" + a.syuka.ToString() + "'"*/;
 
-                            foundRows = ds.Tables[0].Select(expression);
+                            foundRows = ds.Select(expression);
 
                             worksheet.Name = foundRows[0][10] + "_" + foundRows[0][11];
                             workbook.Worksheets[1].Name = workbook.Worksheets[1].Name.Split(' ')[0];
@@ -110,7 +110,7 @@ namespace BLL
                             string expression;
                             DataRow[] foundRows;
                             expression = "AREANM = '" + a.area.ToString() + "' AND SOKONM = '" + a.soko.ToString() + "'"/* + " AND SYUKABI = '" + a.syuka.ToString() + "'"*/;
-                            foundRows = ds.Tables[0].Select(expression);
+                            foundRows = ds.Select(expression);
                                 worksheet.Name = foundRows[0][10] + "_" + foundRows[0][11];
                                 workbook.Worksheets[1].Name = workbook.Worksheets[1].Name.Split(' ')[0];
                                 worksheet.Cells[1, "H"] = foundRows[0][10];
@@ -221,7 +221,7 @@ namespace BLL
 
                 sql.Append("    AND T_KDHSINFO.SOKOCD =" + "'" + SOKOCD + "'");
 
-                DataSet dataSet = dev.executeSelectQuery(sql.ToString());
+                DataTable dataSet = dev.executeSelectQuery(sql.ToString());
 
                 UpdateParameter(dataSet, gr);
                
@@ -237,16 +237,16 @@ namespace BLL
         }
 
         //Update database set status to 1, for Syukahyo
-        public bool UpdateParameter(DataSet ds,DataGridView gr)
+        public bool UpdateParameter(DataTable ds,DataGridView gr)
         {
                 DEV10G2U dev = new DEV10G2U();
                 StringBuilder sql = new StringBuilder();
-                DataTable tb = ds.Tables[0];
+                DataTable tb = ds;
                 
 
                 foreach (DataRow rows in tb.Rows) {                 
                 sql.Append("UPDATE T_KDHSINFO SET ");
-                sql.Append(" STATUS = 1,");
+                sql.Append(" STATUS = 2,");
                 sql.Append(" LUDATE = to_date('" + DateTime.Now);
                 sql.Append("' , 'yyyy-mm-dd hh24:mi:ss'), LUWSID = '" + Environment.MachineName);
                 sql.Append("', LUUSERID = '" + Environment.UserName + "'");
@@ -278,7 +278,7 @@ namespace BLL
                 var SOKOCD = queryC[0].ToString();
 
                 sql.Append("    AND  T_KDHSINFO.SOKOCD =" + "'" + SOKOCD + "'");
-                sql.Append(" AND T_KDHSINFO.STATUS = 0");
+                sql.Append(" AND T_KDHSINFO.STATUS = 1");
                 return dev.executeUpdateQuery(sql.ToString());
 
             }

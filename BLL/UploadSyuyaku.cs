@@ -50,10 +50,7 @@ namespace BLL
             var queryS = xml.Root.Descendants("rndflg")
                         .Elements("set")
                         .Select(a => a.Value);
-            var links = xml.Descendants("sokocd")
-                        .Attributes("val")
-                        .Select(element => element.Value).ToList();
-            var SOKOCD = links[0].ToString();
+            string SOKOCD = Tools.getSokocd();
             List<string> cols = new List<string>();
             List<string> sets = new List<string>();
 
@@ -75,9 +72,16 @@ namespace BLL
                 {
                     var col = cols[i];
                     var set = sets[i];
-                    sql.Append(set + " = '"+ rw[((int)char.Parse(col) % 32) - 1] + "',");
+                    var colVal = rw[((int)char.Parse(col) % 32) - 1];
+                    string ZNK = rw[((int)'J' % 32) - 1].ToString();
+                    string HAISO = rw[((int)'I' % 32) - 1].ToString();
+                    if (ZNK == "Y" && HAISO != "")
+                    {
+                        throw new ArgumentException("NMSL"); ;
+                    }
+                    sql.Append(set + " = '"+ colVal + "',");
                 }
-                sql.Append(" STATUS = 2,");
+                sql.Append(" STATUS = 1,");
                 sql.Append(" LUDATE = to_date('" + DateTime.Now);
                 sql.Append("' , 'yyyy-mm-dd hh24:mi:ss'), LUWSID = '" + Environment.MachineName);
                 sql.Append("', LUUSERID = '" + Environment.UserName);

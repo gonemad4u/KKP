@@ -15,7 +15,7 @@ namespace BLL
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger
                (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         //Create the Excel file from dataset
-        public void Okuri(DataSet ds,string SOKOCD)
+        public void Okuri(DataTable ds,string SOKOCD)
         {
             string saveFileName = "送り状兼受領書_" + SOKOCD + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
             string templetFile = @"template\送り状兼受領書.xlsx";
@@ -36,7 +36,7 @@ namespace BLL
                 try
                 {
                     log.Info("EXEC BEGIN");
-                    var distinctIds = ds.Tables[0].AsEnumerable()
+                    var distinctIds = ds.AsEnumerable()
                      .Select(s => new
                      {
                          area = s.Field<string>("AREANM"),
@@ -55,7 +55,7 @@ namespace BLL
                             DataRow[] foundRows;
                             expression = "AREANM = '" + a.area.ToString() + "' AND SOKONM = '" + a.soko.ToString() + "'" + " AND NUKNNM = '" + a.nukn.ToString() + "'";
 
-                            foundRows = ds.Tables[0].Select(expression);
+                            foundRows = ds.Select(expression);
                             worksheet.Name = foundRows[0][10] + "_" + foundRows[0][11] + "_" + foundRows[0][1];
                             workbook.Worksheets[1].Name = workbook.Worksheets[1].Name.Split(' ')[0];
                             worksheet.Cells[1, "H"] = foundRows[0][10];
@@ -105,7 +105,7 @@ namespace BLL
                             string expression;
                             DataRow[] foundRows;
                             expression = "AREANM = '" + a.area.ToString() + "' AND SOKONM = '" + a.soko.ToString() + "'" + " AND NUKNNM = '" + a.nukn.ToString() + "'";
-                            foundRows = ds.Tables[0].Select(expression);
+                            foundRows = ds.Select(expression);
                             worksheet.Name = foundRows[0][10] + "_" + foundRows[0][11] + "_" + foundRows[0][1];
                             workbook.Worksheets[1].Name = workbook.Worksheets[1].Name.Split(' ')[0];
                             worksheet.Cells[1, "H"] = foundRows[0][10];
@@ -220,7 +220,7 @@ namespace BLL
 
                 sql.Append("    AND T_KDHSINFO.SOKOCD =" + "'"+SOKOCD + "'");
 
-                DataSet dataSet = dev.executeSelectQuery(sql.ToString());
+                DataTable dataSet = dev.executeSelectQuery(sql.ToString());
 
                 Okuri(dataSet, SOKOCD);
 

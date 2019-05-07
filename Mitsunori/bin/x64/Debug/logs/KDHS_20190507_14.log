@@ -1,0 +1,39 @@
+2019-05-07 14:03:56,314 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:419] - SEARCH BEGIN
+2019-05-07 14:03:56,387 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:416] - SEARCH END
+2019-05-07 14:06:56,009 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:419] - SEARCH BEGIN
+2019-05-07 14:06:56,118 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:416] - SEARCH END
+2019-05-07 14:08:14,418 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:419] - SEARCH BEGIN
+2019-05-07 14:08:14,490 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:416] - SEARCH END
+2019-05-07 14:11:40,665 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:419] - SEARCH BEGIN
+2019-05-07 14:11:40,805 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:416] - SEARCH END
+2019-05-07 14:11:51,928 INFO  BLL.DownLoad [1][C:\Mitsunori\BLL\DownLoad.cs:49] - EXEC BEGIN
+2019-05-07 14:11:52,328 INFO  BLL.DownLoad [1][C:\Mitsunori\BLL\DownLoad.cs:21] - EXEC END
+2019-05-07 14:11:53,208 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:419] - SEARCH BEGIN
+2019-05-07 14:11:53,228 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:416] - SEARCH END
+2019-05-07 14:11:56,818 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:419] - SEARCH BEGIN
+2019-05-07 14:11:56,868 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:416] - SEARCH END
+2019-05-07 14:16:40,359 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:572] - EXEC BEGIN
+2019-05-07 14:16:40,864 FATAL Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:575] - Unexpected Error: 'Microsoft.ACE.OLEDB.12.0' プロバイダーはローカルのコンピューターに登録されていません。
+2019-05-07 14:16:40,864 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:557] - EXEC END
+2019-05-07 14:17:15,295 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:572] - EXEC BEGIN
+2019-05-07 14:17:15,332 FATAL Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:575] - Unexpected Error: 'Microsoft.ACE.OLEDB.12.0' プロバイダーはローカルのコンピューターに登録されていません。
+2019-05-07 14:17:15,332 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:557] - EXEC END
+2019-05-07 14:18:12,724 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:572] - EXEC BEGIN
+2019-05-07 14:18:12,762 FATAL Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:575] - Unexpected Error: 'Microsoft.ACE.OLEDB.12.0' プロバイダーはローカルのコンピューターに登録されていません。
+2019-05-07 14:18:12,762 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:557] - EXEC END
+2019-05-07 14:18:33,120 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:572] - EXEC BEGIN
+2019-05-07 14:19:43,585 FATAL Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:575] - Unexpected Error: 'Microsoft.ACE.OLEDB.12.0' プロバイダーはローカルのコンピューターに登録されていません。
+2019-05-07 14:19:43,586 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:557] - EXEC END
+2019-05-07 14:19:58,366 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:572] - EXEC BEGIN
+2019-05-07 14:25:15,309 FATAL Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:575] - Unexpected Error: 'Microsoft.ACE.OLEDB.12.0' プロバイダーはローカルのコンピューターに登録されていません。
+2019-05-07 14:25:15,311 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:557] - EXEC END
+2019-05-07 14:25:19,726 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:572] - EXEC BEGIN
+2019-05-07 14:45:21,760 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:572] - EXEC BEGIN
+2019-05-07 14:49:03,581 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:572] - EXEC BEGIN
+2019-05-07 14:49:21,846 FATAL Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:575] - Unexpected Error: 'Microsoft.ACE.OLEDB.12.0' プロバイダーはローカルのコンピューターに登録されていません。
+2019-05-07 14:49:22,817 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:557] - EXEC END
+2019-05-07 14:55:32,257 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:419] - SEARCH BEGIN
+2019-05-07 14:55:32,381 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:416] - SEARCH END
+2019-05-07 14:55:41,722 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:572] - EXEC BEGIN
+2019-05-07 14:58:13,132 INFO  Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:572] - EXEC BEGIN
+2019-05-07 14:59:24,261 FATAL Mitsunori.FmMNRKYDHS01 [1][C:\Mitsunori\Mitsunori\MNRKYDHS01.cs:575] - Unexpected Error: 'Microsoft.ACE.OLEDB.12.0' プロバイダーはローカルのコンピューターに登録されていません。

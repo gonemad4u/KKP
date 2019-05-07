@@ -39,8 +39,7 @@ namespace Mitsunori
             var Areanm = Tools.GetAreanm();
             CB_AREA.DataSource = Areanm;
             CB_AREA.ValueMember = "areanm";
-            CB_AREA.DisplayMember = "areanm";
-            //GR_LIST.RowHeaderCellChanged += new System.Windows.Forms.DataGridViewRowEventHandler(headerSelect);
+            CB_AREA.DisplayMember = "areanm";            
         }
 
         //Clears all selections
@@ -466,22 +465,37 @@ namespace Mitsunori
             {
 
                 Search search = new Search();
-                DataSet ds = new DataSet();
+                DataTable ds = new DataTable();
                 ds = search.SearchByParameter(MNR, SNK, TYU, CYU, APU, Status1, Status2, Status3, Status4, Status5, Status6, Status7, SyukaBi1, SyukaBi2, Exlsrd1,
                     Exlsrd2, Unchin1, Unchin2, OrderNO, HaisoBnNO, ZanKa, Area, !E_SYUKABI1.Checked, !E_SYUKABI2.Checked, !E_EXLSRD1.Checked, !E_EXLSRD2.Checked, !E_UNCHIN1.Checked, !E_UNCHIN2.Checked);
-                if (ds.Tables[0].Rows.Count <= 0)
+                if (ds.Rows.Count <= 0)
                 {
                     MessageBox.Show("対象データがありません。", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
-                else if (ds.Tables[0].Rows.Count > int.Parse(Tools.GetKenSu()))
+                else if (ds.Rows.Count > int.Parse(Tools.GetKenSu()))
                 {
                     string mess = "最大件数" + Tools.GetKenSu() + "を越えています。検索条件を変更してください。";
                     MessageBox.Show(mess, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    GR_LIST.DataSource = ds.Tables[0];
+                    GR_LIST.DataSource = ds;
+                    GR_LIST.Sort(ZNKFLG, 0);
+                    int totalCount = 0;
+                    double totalWeight = 0;
+                    for (int i = 0; i < GR_LIST.RowCount; i++)
+                    {
+                        var nmsl = GR_LIST.Rows[i].Cells["ZNKFLG"].Value;
+                        if (nmsl is DBNull)
+                        {
+                            totalCount += 1;
+                            var bb = GR_LIST.Rows[i].Cells["WT"].Value;
+                            totalWeight += Convert.ToDouble(bb);
+                        }
+                    }
+                    label6.Text = totalCount.ToString();
+                    label7.Text = totalWeight.ToString();
                 }
                 //Rectangle rect = GR_LIST.GetCellDisplayRectangle(1, -1, true);
                 //checkBox1.Location = rect.Location;
@@ -528,7 +542,7 @@ namespace Mitsunori
 
                 DataGridView gr = GR_LIST;
                 DownLoad dl = new DownLoad();
-                DataSet ds = new DataSet();
+                DataTable ds = new DataTable();
                 //検索
                 ds = dl.SearchParameter(MNR, SNK, TYU, CYU, APU, Status1, Status2, Status3, Status4, Status5, Status6, Status7, SyukaBi1, SyukaBi2, Exlsrd1,
                     Exlsrd2, Unchin1, Unchin2, OrderNO, HaisoBnNO, ZanKa, Area, !E_SYUKABI1.Checked, !E_SYUKABI2.Checked, !E_EXLSRD1.Checked, !E_EXLSRD2.Checked, !E_UNCHIN1.Checked, !E_UNCHIN2.Checked);
@@ -735,5 +749,7 @@ namespace Mitsunori
                 GR_LIST.EndEdit();
             }
         }
+
+     
     }
 }

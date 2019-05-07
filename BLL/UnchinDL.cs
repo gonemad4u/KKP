@@ -16,7 +16,7 @@ namespace BLL
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger
         (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public void UnchinDownLoad(DataSet ds, DataGridView gr)
+        public void UnchinDownLoad(DataTable ds, DataGridView gr)
         {
 
             string saveFileName = "運賃計算_" + DateTime.Now.ToString("yyyyMMdd");
@@ -62,9 +62,9 @@ namespace BLL
                             number++;
                             worksheet.Cells[excelRow + 2, 1] = number;
 
-                            for (int j = 0; j < ds.Tables[0].Columns.Count; j++)
+                            for (int j = 0; j < ds.Columns.Count; j++)
                             {
-                                worksheet.Cells[excelRow + 2, j + 2] = ds.Tables[0].Rows[excelRow][j];
+                                worksheet.Cells[excelRow + 2, j + 2] = ds.Rows[excelRow][j];
                             }
                             excelRow++;
                         }
@@ -160,7 +160,7 @@ namespace BLL
                 sql.Append("    AND T_KDHSINFO.SOKOCD =" + "'" + SOKOCD + "'");
                 sql.Append("    AND T_KDHSINFO.ZNKFLG  IS  NULL      ");
 
-                DataSet dataSet = dev.executeSelectQuery(sql.ToString());
+                DataTable dataSet = dev.executeSelectQuery(sql.ToString());
                 UnchinDownLoad(dataSet, gr);
 
             }

@@ -56,15 +56,15 @@ namespace DAL
         }
 
         //Simply executes sql
-        public DataSet executeSelectQuery(String sql)
+        public DataTable executeSelectQuery(String sql)
         {
             using (conn = new OracleConnection(connString))
             { 
-                DataSet ds = new DataSet();
+                DataTable dt = new DataTable();
                 try
                 {
                     OracleDataAdapter ada = new OracleDataAdapter(sql, conn);
-                    ada.Fill(ds);
+                    ada.Fill(dt);
                 }
                 catch (Exception e)
                 {
@@ -76,7 +76,7 @@ namespace DAL
                 {
                     conn.Close();
                 }
-                return ds;
+                return dt;
             }
         }
         //Alter the datatable to leave out all the duplicate rows, in case there are no dulicate return false
@@ -313,7 +313,7 @@ namespace DAL
                 sql.Append(" AND t.SOKOCD = '");
                 var SOKOCD = Tools.getSokocd();
                 sql.Append(SOKOCD + "'");
-                return executeSelectQuery(sql.ToString()).Tables[0];
+                return executeSelectQuery(sql.ToString());
             }
             else
             {

@@ -17,7 +17,7 @@ namespace BLL
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger
               (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public void SyuYakuDL(DataGridView gr, DataSet ds)
+        public void SyuYakuDL(DataGridView gr, DataTable ds)
         {
             
             string saveFileName = "集約_" + DateTime.Now.ToString("yyyyMMdd");
@@ -55,18 +55,18 @@ namespace BLL
                         if ((bool)gr.Rows[a].Cells[0].EditedFormattedValue == true)
                         {
                             //DataSet行数判断
-                            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                            for (int i = 0; i < ds.Rows.Count; i++)
                             {
-                                if (gr.Rows[a].Cells["DENPYONO"].Value.Equals(ds.Tables[0].Rows[i][13])
-                                 && gr.Rows[a].Cells["SOKOCD"].Value.Equals(ds.Tables[0].Rows[i][19])
-                                 && gr.Rows[a].Cells["SYKFILENM"].Value.Equals(ds.Tables[0].Rows[i][17])
-                                 && gr.Rows[a].Cells["SEQNO"].Value.Equals(ds.Tables[0].Rows[i][18]))
+                                if (gr.Rows[a].Cells["DENPYONO"].Value.Equals(ds.Rows[i][13])
+                                 && gr.Rows[a].Cells["SOKOCD"].Value.Equals(ds.Rows[i][19])
+                                 && gr.Rows[a].Cells["SYKFILENM"].Value.Equals(ds.Rows[i][17])
+                                 && gr.Rows[a].Cells["SEQNO"].Value.Equals(ds.Rows[i][18]))
                                 {
                                     //NO行取得
                                     worksheet.Cells[2, 1] = 1;
                                     for (int r = 0; r < 19; r++)
                                     {
-                                        worksheet.Cells[2, r + 2] = ds.Tables[0].Rows[i][r];                          
+                                        worksheet.Cells[2, r + 2] = ds.Rows[i][r];                          
                                     }
                                     selectRow = a;
                                     break;
@@ -84,12 +84,12 @@ namespace BLL
                     {
                         if ((bool)gr.Rows[b].Cells[0].EditedFormattedValue == true)
                         {
-                            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                            for (int i = 0; i < ds.Rows.Count; i++)
                             {
-                                 if (gr.Rows[b].Cells["DENPYONO"].Value.Equals(ds.Tables[0].Rows[i][13])
-                                    && gr.Rows[b].Cells["SOKOCD"].Value.Equals(ds.Tables[0].Rows[i][19])
-                                    && gr.Rows[b].Cells["SYKFILENM"].Value.Equals(ds.Tables[0].Rows[i][17])
-                                    && gr.Rows[b].Cells["SEQNO"].Value.Equals(ds.Tables[0].Rows[i][18]))
+                                 if (gr.Rows[b].Cells["DENPYONO"].Value.Equals(ds.Rows[i][13])
+                                    && gr.Rows[b].Cells["SOKOCD"].Value.Equals(ds.Rows[i][19])
+                                    && gr.Rows[b].Cells["SYKFILENM"].Value.Equals(ds.Rows[i][17])
+                                    && gr.Rows[b].Cells["SEQNO"].Value.Equals(ds.Rows[i][18]))
                                  {                                    
                                     Excel.Range RngToCopy = worksheet.get_Range("A2").EntireRow;
                                     Excel.Range RngToInsert = worksheet.get_Range("A" + (number + 2)).EntireRow;
@@ -101,7 +101,7 @@ namespace BLL
 
                                     for (int j = 0; j < 19; j++)
                                     {
-                                        worksheet.Cells[excelRow + 3, j + 2] = ds.Tables[0].Rows[i][j];
+                                        worksheet.Cells[excelRow + 3, j + 2] = ds.Rows[i][j];
                                     }
                                         excelRow++;
                                  }
@@ -151,7 +151,7 @@ namespace BLL
             }
         }
 
-        public DataSet SearchParameter(bool MNR, bool SNK, bool TYU, bool CYU, bool APU, bool Status1, bool Status2, bool Status3, bool Status4, bool Status5, bool Status6, bool Status7,
+        public DataTable SearchParameter(bool MNR, bool SNK, bool TYU, bool CYU, bool APU, bool Status1, bool Status2, bool Status3, bool Status4, bool Status5, bool Status6, bool Status7,
             string SyukaBi1, string SyukaBi2, string Exlsrd1, string Exlsrd2, string Unchin1, string Unchin2,
             string OrderNo, string HaisoBnNO, bool Zanka, object Area, bool SyukaFlgL, bool SyukaFlgR, bool ExlFlgL, bool ExlFlgR, bool UnchinFlgL, bool UnchinFlgR)
         {
@@ -324,7 +324,7 @@ namespace BLL
                 }
                 else
                 {
-                    sqlWhere.Add("ZNKFLG IS NULL ");
+                    //sqlWhere.Add("ZNKFLG IS NULL ");
                 }
 
                 if (sqlWhere.Count > 0)

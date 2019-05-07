@@ -140,7 +140,7 @@ namespace BLL
             sql.Append(SOKOCD + "'");
             sql.Append(" AND t.STATUS = 2");
             DEV10G2U dev = new DEV10G2U();
-            return dev.executeSelectQuery(sql.ToString()).Tables[0];
+            return dev.executeSelectQuery(sql.ToString());
         }
         public void UpdateByKey(List<string[]> vs)
         {

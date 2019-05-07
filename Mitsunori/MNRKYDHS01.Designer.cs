@@ -36,8 +36,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.PanMNRKYDHS01 = new System.Windows.Forms.Panel();
             this.GR_MNRKYDHS01 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.E_EXLSRD2 = new System.Windows.Forms.DateTimePicker();
@@ -74,18 +79,7 @@
             this.LabE_ORDERNO = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.PanMNRKYDHS02 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.GR_LIST = new System.Windows.Forms.DataGridView();
-            this.B_CLOSE = new System.Windows.Forms.Button();
-            this.B_UNCHINDOWNLOAD = new System.Windows.Forms.Button();
-            this.B_UNCHINCAL = new System.Windows.Forms.Button();
-            this.B_HAISODOWNLOAD = new System.Windows.Forms.Button();
-            this.B_OKURIJYO = new System.Windows.Forms.Button();
-            this.B_SYUKAHYO = new System.Windows.Forms.Button();
-            this.B_SYKUPLOAD = new System.Windows.Forms.Button();
-            this.B_SYKDOWNLOAD = new System.Windows.Forms.Button();
-            this.B_READ = new System.Windows.Forms.Button();
-            this.B_DELETE = new System.Windows.Forms.Button();
             this.myCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.CODE1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SYUKABI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,11 +99,33 @@
             this.SOKOCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SYKFILENM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SEQNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.B_CLOSE = new System.Windows.Forms.Button();
+            this.B_UNCHINDOWNLOAD = new System.Windows.Forms.Button();
+            this.B_UNCHINCAL = new System.Windows.Forms.Button();
+            this.B_HAISODOWNLOAD = new System.Windows.Forms.Button();
+            this.B_OKURIJYO = new System.Windows.Forms.Button();
+            this.B_SYUKAHYO = new System.Windows.Forms.Button();
+            this.B_SYKUPLOAD = new System.Windows.Forms.Button();
+            this.B_SYKDOWNLOAD = new System.Windows.Forms.Button();
+            this.B_READ = new System.Windows.Forms.Button();
+            this.B_DELETE = new System.Windows.Forms.Button();
             this.PanMNRKYDHS01.SuspendLayout();
             this.GR_MNRKYDHS01.SuspendLayout();
             this.PanMNRKYDHS02.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GR_LIST)).BeginInit();
             this.SuspendLayout();
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.checkBox1.Location = new System.Drawing.Point(57, 3);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox1.UseMnemonic = false;
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // PanMNRKYDHS01
             // 
@@ -117,11 +133,15 @@
             this.PanMNRKYDHS01.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanMNRKYDHS01.Location = new System.Drawing.Point(0, 0);
             this.PanMNRKYDHS01.Name = "PanMNRKYDHS01";
-            this.PanMNRKYDHS01.Size = new System.Drawing.Size(1272, 184);
+            this.PanMNRKYDHS01.Size = new System.Drawing.Size(1270, 184);
             this.PanMNRKYDHS01.TabIndex = 0;
             // 
             // GR_MNRKYDHS01
             // 
+            this.GR_MNRKYDHS01.Controls.Add(this.label7);
+            this.GR_MNRKYDHS01.Controls.Add(this.label6);
+            this.GR_MNRKYDHS01.Controls.Add(this.label5);
+            this.GR_MNRKYDHS01.Controls.Add(this.label4);
             this.GR_MNRKYDHS01.Controls.Add(this.radioButton7);
             this.GR_MNRKYDHS01.Controls.Add(this.radioButton6);
             this.GR_MNRKYDHS01.Controls.Add(this.E_EXLSRD2);
@@ -162,6 +182,42 @@
             this.GR_MNRKYDHS01.Size = new System.Drawing.Size(1266, 178);
             this.GR_MNRKYDHS01.TabIndex = 35;
             this.GR_MNRKYDHS01.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(856, 142);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(11, 12);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(749, 142);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(11, 12);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(797, 142);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "合計重量";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(714, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 12);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "件数";
             // 
             // radioButton7
             // 
@@ -531,28 +587,13 @@
             this.PanMNRKYDHS02.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanMNRKYDHS02.Location = new System.Drawing.Point(0, 188);
             this.PanMNRKYDHS02.Name = "PanMNRKYDHS02";
-            this.PanMNRKYDHS02.Size = new System.Drawing.Size(1272, 760);
+            this.PanMNRKYDHS02.Size = new System.Drawing.Size(1270, 760);
             this.PanMNRKYDHS02.TabIndex = 1;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.Location = new System.Drawing.Point(57, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // GR_LIST
             // 
             this.GR_LIST.AllowUserToAddRows = false;
             this.GR_LIST.AllowUserToDeleteRows = false;
-            this.GR_LIST.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -590,7 +631,8 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.GR_LIST.DefaultCellStyle = dataGridViewCellStyle7;
-            this.GR_LIST.Location = new System.Drawing.Point(3, 0);
+            this.GR_LIST.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GR_LIST.Location = new System.Drawing.Point(0, 0);
             this.GR_LIST.Name = "GR_LIST";
             this.GR_LIST.RightToLeft = System.Windows.Forms.RightToLeft.No;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
@@ -603,111 +645,11 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.GR_LIST.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.GR_LIST.RowTemplate.Height = 21;
-            this.GR_LIST.Size = new System.Drawing.Size(1266, 715);
+            this.GR_LIST.Size = new System.Drawing.Size(1270, 720);
             this.GR_LIST.TabIndex = 0;
             this.GR_LIST.TabStop = false;
             this.GR_LIST.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.myDataGrid_OnCellMouseUp);
             this.GR_LIST.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.myDataGrid_OnCellValueChanged);
-            // 
-            // B_CLOSE
-            // 
-            this.B_CLOSE.Location = new System.Drawing.Point(1139, 726);
-            this.B_CLOSE.Name = "B_CLOSE";
-            this.B_CLOSE.Size = new System.Drawing.Size(95, 23);
-            this.B_CLOSE.TabIndex = 10;
-            this.B_CLOSE.Text = "閉じる";
-            this.B_CLOSE.UseVisualStyleBackColor = true;
-            this.B_CLOSE.Click += new System.EventHandler(this.B_CLOSE_Click);
-            // 
-            // B_UNCHINDOWNLOAD
-            // 
-            this.B_UNCHINDOWNLOAD.Location = new System.Drawing.Point(986, 726);
-            this.B_UNCHINDOWNLOAD.Name = "B_UNCHINDOWNLOAD";
-            this.B_UNCHINDOWNLOAD.Size = new System.Drawing.Size(95, 23);
-            this.B_UNCHINDOWNLOAD.TabIndex = 9;
-            this.B_UNCHINDOWNLOAD.Text = "運賃計算DL";
-            this.B_UNCHINDOWNLOAD.UseVisualStyleBackColor = true;
-            this.B_UNCHINDOWNLOAD.Click += new System.EventHandler(this.B_UNCHINDOWNLOAD_Click);
-            // 
-            // B_UNCHINCAL
-            // 
-            this.B_UNCHINCAL.Location = new System.Drawing.Point(873, 726);
-            this.B_UNCHINCAL.Name = "B_UNCHINCAL";
-            this.B_UNCHINCAL.Size = new System.Drawing.Size(95, 23);
-            this.B_UNCHINCAL.TabIndex = 8;
-            this.B_UNCHINCAL.Text = "運賃計算";
-            this.B_UNCHINCAL.UseVisualStyleBackColor = true;
-            this.B_UNCHINCAL.Click += new System.EventHandler(this.B_UNCHINCAL_Click);
-            // 
-            // B_HAISODOWNLOAD
-            // 
-            this.B_HAISODOWNLOAD.Location = new System.Drawing.Point(758, 726);
-            this.B_HAISODOWNLOAD.Name = "B_HAISODOWNLOAD";
-            this.B_HAISODOWNLOAD.Size = new System.Drawing.Size(95, 23);
-            this.B_HAISODOWNLOAD.TabIndex = 7;
-            this.B_HAISODOWNLOAD.Text = "配送DL";
-            this.B_HAISODOWNLOAD.UseVisualStyleBackColor = true;
-            this.B_HAISODOWNLOAD.Click += new System.EventHandler(this.B_HAISODOWNLOAD_Click);
-            // 
-            // B_OKURIJYO
-            // 
-            this.B_OKURIJYO.Location = new System.Drawing.Point(643, 726);
-            this.B_OKURIJYO.Name = "B_OKURIJYO";
-            this.B_OKURIJYO.Size = new System.Drawing.Size(95, 23);
-            this.B_OKURIJYO.TabIndex = 6;
-            this.B_OKURIJYO.Text = "送り状兼受領書";
-            this.B_OKURIJYO.UseVisualStyleBackColor = true;
-            this.B_OKURIJYO.Click += new System.EventHandler(this.B_OKURIJYO_Click);
-            // 
-            // B_SYUKAHYO
-            // 
-            this.B_SYUKAHYO.Location = new System.Drawing.Point(528, 726);
-            this.B_SYUKAHYO.Name = "B_SYUKAHYO";
-            this.B_SYUKAHYO.Size = new System.Drawing.Size(95, 23);
-            this.B_SYUKAHYO.TabIndex = 5;
-            this.B_SYUKAHYO.Text = "集荷表";
-            this.B_SYUKAHYO.UseVisualStyleBackColor = true;
-            this.B_SYUKAHYO.Click += new System.EventHandler(this.B_SYUKAHYO_Click);
-            // 
-            // B_SYKUPLOAD
-            // 
-            this.B_SYKUPLOAD.Location = new System.Drawing.Point(413, 726);
-            this.B_SYKUPLOAD.Name = "B_SYKUPLOAD";
-            this.B_SYKUPLOAD.Size = new System.Drawing.Size(95, 23);
-            this.B_SYKUPLOAD.TabIndex = 4;
-            this.B_SYKUPLOAD.Text = "集約UP";
-            this.B_SYKUPLOAD.UseVisualStyleBackColor = true;
-            this.B_SYKUPLOAD.Click += new System.EventHandler(this.B_SYKUPLOAD_Click);
-            // 
-            // B_SYKDOWNLOAD
-            // 
-            this.B_SYKDOWNLOAD.Location = new System.Drawing.Point(298, 726);
-            this.B_SYKDOWNLOAD.Name = "B_SYKDOWNLOAD";
-            this.B_SYKDOWNLOAD.Size = new System.Drawing.Size(95, 23);
-            this.B_SYKDOWNLOAD.TabIndex = 3;
-            this.B_SYKDOWNLOAD.Text = "集約DL";
-            this.B_SYKDOWNLOAD.UseVisualStyleBackColor = true;
-            this.B_SYKDOWNLOAD.Click += new System.EventHandler(this.B_SYKDOWNLOAD_Click);
-            // 
-            // B_READ
-            // 
-            this.B_READ.Location = new System.Drawing.Point(183, 726);
-            this.B_READ.Name = "B_READ";
-            this.B_READ.Size = new System.Drawing.Size(95, 23);
-            this.B_READ.TabIndex = 2;
-            this.B_READ.Text = "取込";
-            this.B_READ.UseVisualStyleBackColor = true;
-            this.B_READ.Click += new System.EventHandler(this.B_READ_Click);
-            // 
-            // B_DELETE
-            // 
-            this.B_DELETE.Location = new System.Drawing.Point(30, 726);
-            this.B_DELETE.Name = "B_DELETE";
-            this.B_DELETE.Size = new System.Drawing.Size(95, 23);
-            this.B_DELETE.TabIndex = 1;
-            this.B_DELETE.Text = "削除";
-            this.B_DELETE.UseVisualStyleBackColor = true;
-            this.B_DELETE.Click += new System.EventHandler(this.B_DELETE_Click);
             // 
             // myCheckBoxColumn
             // 
@@ -715,12 +657,13 @@
             this.myCheckBoxColumn.Frozen = true;
             this.myCheckBoxColumn.HeaderText = "";
             this.myCheckBoxColumn.Name = "myCheckBoxColumn";
-            this.myCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.myCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.myCheckBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.myCheckBoxColumn.Width = 40;
             // 
             // CODE1
             // 
+            this.CODE1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.CODE1.DataPropertyName = "CODE1";
             this.CODE1.Frozen = true;
             this.CODE1.HeaderText = "ステータス";
@@ -893,11 +836,111 @@
             this.SEQNO.Name = "SEQNO";
             this.SEQNO.Visible = false;
             // 
+            // B_CLOSE
+            // 
+            this.B_CLOSE.Location = new System.Drawing.Point(1139, 726);
+            this.B_CLOSE.Name = "B_CLOSE";
+            this.B_CLOSE.Size = new System.Drawing.Size(95, 23);
+            this.B_CLOSE.TabIndex = 10;
+            this.B_CLOSE.Text = "閉じる";
+            this.B_CLOSE.UseVisualStyleBackColor = true;
+            this.B_CLOSE.Click += new System.EventHandler(this.B_CLOSE_Click);
+            // 
+            // B_UNCHINDOWNLOAD
+            // 
+            this.B_UNCHINDOWNLOAD.Location = new System.Drawing.Point(986, 726);
+            this.B_UNCHINDOWNLOAD.Name = "B_UNCHINDOWNLOAD";
+            this.B_UNCHINDOWNLOAD.Size = new System.Drawing.Size(95, 23);
+            this.B_UNCHINDOWNLOAD.TabIndex = 9;
+            this.B_UNCHINDOWNLOAD.Text = "運賃計算DL";
+            this.B_UNCHINDOWNLOAD.UseVisualStyleBackColor = true;
+            this.B_UNCHINDOWNLOAD.Click += new System.EventHandler(this.B_UNCHINDOWNLOAD_Click);
+            // 
+            // B_UNCHINCAL
+            // 
+            this.B_UNCHINCAL.Location = new System.Drawing.Point(873, 726);
+            this.B_UNCHINCAL.Name = "B_UNCHINCAL";
+            this.B_UNCHINCAL.Size = new System.Drawing.Size(95, 23);
+            this.B_UNCHINCAL.TabIndex = 8;
+            this.B_UNCHINCAL.Text = "運賃計算";
+            this.B_UNCHINCAL.UseVisualStyleBackColor = true;
+            this.B_UNCHINCAL.Click += new System.EventHandler(this.B_UNCHINCAL_Click);
+            // 
+            // B_HAISODOWNLOAD
+            // 
+            this.B_HAISODOWNLOAD.Location = new System.Drawing.Point(758, 726);
+            this.B_HAISODOWNLOAD.Name = "B_HAISODOWNLOAD";
+            this.B_HAISODOWNLOAD.Size = new System.Drawing.Size(95, 23);
+            this.B_HAISODOWNLOAD.TabIndex = 7;
+            this.B_HAISODOWNLOAD.Text = "配送DL";
+            this.B_HAISODOWNLOAD.UseVisualStyleBackColor = true;
+            this.B_HAISODOWNLOAD.Click += new System.EventHandler(this.B_HAISODOWNLOAD_Click);
+            // 
+            // B_OKURIJYO
+            // 
+            this.B_OKURIJYO.Location = new System.Drawing.Point(643, 726);
+            this.B_OKURIJYO.Name = "B_OKURIJYO";
+            this.B_OKURIJYO.Size = new System.Drawing.Size(95, 23);
+            this.B_OKURIJYO.TabIndex = 6;
+            this.B_OKURIJYO.Text = "送り状兼受領書";
+            this.B_OKURIJYO.UseVisualStyleBackColor = true;
+            this.B_OKURIJYO.Click += new System.EventHandler(this.B_OKURIJYO_Click);
+            // 
+            // B_SYUKAHYO
+            // 
+            this.B_SYUKAHYO.Location = new System.Drawing.Point(528, 726);
+            this.B_SYUKAHYO.Name = "B_SYUKAHYO";
+            this.B_SYUKAHYO.Size = new System.Drawing.Size(95, 23);
+            this.B_SYUKAHYO.TabIndex = 5;
+            this.B_SYUKAHYO.Text = "集荷表";
+            this.B_SYUKAHYO.UseVisualStyleBackColor = true;
+            this.B_SYUKAHYO.Click += new System.EventHandler(this.B_SYUKAHYO_Click);
+            // 
+            // B_SYKUPLOAD
+            // 
+            this.B_SYKUPLOAD.Location = new System.Drawing.Point(413, 726);
+            this.B_SYKUPLOAD.Name = "B_SYKUPLOAD";
+            this.B_SYKUPLOAD.Size = new System.Drawing.Size(95, 23);
+            this.B_SYKUPLOAD.TabIndex = 4;
+            this.B_SYKUPLOAD.Text = "集約UP";
+            this.B_SYKUPLOAD.UseVisualStyleBackColor = true;
+            this.B_SYKUPLOAD.Click += new System.EventHandler(this.B_SYKUPLOAD_Click);
+            // 
+            // B_SYKDOWNLOAD
+            // 
+            this.B_SYKDOWNLOAD.Location = new System.Drawing.Point(298, 726);
+            this.B_SYKDOWNLOAD.Name = "B_SYKDOWNLOAD";
+            this.B_SYKDOWNLOAD.Size = new System.Drawing.Size(95, 23);
+            this.B_SYKDOWNLOAD.TabIndex = 3;
+            this.B_SYKDOWNLOAD.Text = "集約DL";
+            this.B_SYKDOWNLOAD.UseVisualStyleBackColor = true;
+            this.B_SYKDOWNLOAD.Click += new System.EventHandler(this.B_SYKDOWNLOAD_Click);
+            // 
+            // B_READ
+            // 
+            this.B_READ.Location = new System.Drawing.Point(183, 726);
+            this.B_READ.Name = "B_READ";
+            this.B_READ.Size = new System.Drawing.Size(95, 23);
+            this.B_READ.TabIndex = 2;
+            this.B_READ.Text = "取込";
+            this.B_READ.UseVisualStyleBackColor = true;
+            this.B_READ.Click += new System.EventHandler(this.B_READ_Click);
+            // 
+            // B_DELETE
+            // 
+            this.B_DELETE.Location = new System.Drawing.Point(30, 726);
+            this.B_DELETE.Name = "B_DELETE";
+            this.B_DELETE.Size = new System.Drawing.Size(95, 23);
+            this.B_DELETE.TabIndex = 1;
+            this.B_DELETE.Text = "削除";
+            this.B_DELETE.UseVisualStyleBackColor = true;
+            this.B_DELETE.Click += new System.EventHandler(this.B_DELETE_Click);
+            // 
             // FmMNRKYDHS01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1272, 948);
+            this.ClientSize = new System.Drawing.Size(1270, 948);
             this.Controls.Add(this.PanMNRKYDHS02);
             this.Controls.Add(this.PanMNRKYDHS01);
             this.Name = "FmMNRKYDHS01";
@@ -983,6 +1026,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SOKOCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn SYKFILENM;
         private System.Windows.Forms.DataGridViewTextBoxColumn SEQNO;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
 

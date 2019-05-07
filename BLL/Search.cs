@@ -11,7 +11,7 @@ namespace BLL
 {
     public class Search
     {
-        public DataSet SearchByParameter(bool MNR, bool SNK, bool TYU, bool CYU, bool APU, bool Status1, bool Status2, bool Status3, bool Status4, bool Status5, bool Status6, bool Status7,
+        public DataTable SearchByParameter(bool MNR, bool SNK, bool TYU, bool CYU, bool APU, bool Status1, bool Status2, bool Status3, bool Status4, bool Status5, bool Status6, bool Status7,
             string SyukaBi1, string SyukaBi2, string Exlsrd1, string Exlsrd2, string Unchin1, string Unchin2,
             string OrderNo, string HaisoBnNO, bool Zanka, object Area, bool SyukaFlgL, bool SyukaFlgR, bool ExlFlgL, bool ExlFlgR, bool UnchinFlgL, bool UnchinFlgR)
         {
@@ -205,7 +205,7 @@ namespace BLL
                 }
                 else
                 {
-                    sqlWhere.Add("ZNKFLG IS NULL ");
+                    //sqlWhere.Add("ZNKFLG IS NULL ");
                 }
 
                 if (sqlWhere.Count > 0)
