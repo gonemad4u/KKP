@@ -53,9 +53,9 @@ namespace Mitsunori
                     case "TextBox":
                         ((TextBox)grpValue.Controls[index]).Text = "";
                         break;
-                    case "RadioButton":
-                        ((RadioButton)(grpValue.Controls[index])).Checked = false;
-                        break;
+                    //case "RadioButton":
+                    //    ((RadioButton)(grpValue.Controls[index])).Checked = false;
+                    //    break;
                     case "CheckBox":
                         ((CheckBox)(grpValue.Controls[index])).Checked = false;
                         break;
@@ -64,6 +64,7 @@ namespace Mitsunori
                         break;
                     case "DateTimePicker":
                         ((DateTimePicker)(grpValue.Controls[index])).CustomFormat = " ";
+                        ((DateTimePicker)(grpValue.Controls[index])).Checked = true;
                         break;
                 }
             }

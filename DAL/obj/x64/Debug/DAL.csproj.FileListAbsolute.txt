@@ -6,4 +6,3 @@ C:\Mitsunori\DAL\obj\x64\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Mitsunori\DAL\obj\x64\Debug\DAL.csproj.CopyComplete
 C:\Mitsunori\DAL\obj\x64\Debug\DAL.dll
 C:\Mitsunori\DAL\obj\x64\Debug\DAL.pdb
-C:\Mitsunori\DAL\obj\x64\Debug\DAL.csprojAssemblyReference.cache
