@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
@@ -40,6 +41,7 @@ namespace BLL
         //Update to database
         public void UpdateByDatable(string path)
         {
+            bool ErrFlg = false;
             DataTable dt = ReadExcel(path);
             DEV10G2U dev = new DEV10G2U();
             
@@ -67,18 +69,19 @@ namespace BLL
             foreach (DataRow rw in dt.Rows)
             {
                 StringBuilder sql = new StringBuilder();
+                string ZNK = rw[((int)'J' % 32) - 1].ToString();
+                string HAISO = rw[((int)'I' % 32) - 1].ToString();
+                if (ZNK == "Y" && HAISO != "")
+                {
+                    ErrFlg = true;
+                    continue;
+                }
                 sql.Append("UPDATE T_KDHSINFO SET ");
                 for (int i = 0; i < cols.Count; i++)
                 {
                     var col = cols[i];
                     var set = sets[i];
                     var colVal = rw[((int)char.Parse(col) % 32) - 1];
-                    string ZNK = rw[((int)'J' % 32) - 1].ToString();
-                    string HAISO = rw[((int)'I' % 32) - 1].ToString();
-                    if (ZNK == "Y" && HAISO != "")
-                    {
-                        throw new ArgumentException("NMSL"); ;
-                    }
                     sql.Append(set + " = '"+ colVal + "',");
                 }
                 sql.Append(" STATUS = 1,");
@@ -99,6 +102,7 @@ namespace BLL
                 //
                 dev.executeUpdateQuery(sql.ToString());
             }
+            if(ErrFlg) MessageBox.Show("残貨ありが設定されているが配送便Noが設定されている行があります");
         }
     }
 }

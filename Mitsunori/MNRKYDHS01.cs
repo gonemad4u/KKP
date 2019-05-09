@@ -70,7 +70,7 @@ namespace Mitsunori
             }
         }
 
-        //Check if there is data selected in gridview, if yes return true
+        //Check the number of checked 
         private int GrdCheck()
         {
             int intCount = 0;
@@ -443,8 +443,8 @@ namespace Mitsunori
             bool APU = CH_APU.Checked;
 
             bool Status1 = radioButton1.Checked;
-            bool Status2 = radioButton2.Checked;
-            bool Status3 = radioButton3.Checked;
+            bool Status2 = radioButton3.Checked;
+            bool Status3 = radioButton2.Checked;
             bool Status4 = radioButton4.Checked;
             bool Status5 = radioButton5.Checked;
             bool Status6 = radioButton6.Checked;
@@ -472,12 +472,13 @@ namespace Mitsunori
                 if (ds.Rows.Count <= 0)
                 {
                     MessageBox.Show("対象データがありません。", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                    label6.Text = label7.Text = "0";
                 }
                 else if (ds.Rows.Count > int.Parse(Tools.GetKenSu()))
                 {
                     string mess = "最大件数" + Tools.GetKenSu() + "を越えています。検索条件を変更してください。";
                     MessageBox.Show(mess, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    label6.Text = label7.Text = "0";
                 }
                 else
                 {
@@ -490,7 +491,7 @@ namespace Mitsunori
                         var nmsl = GR_LIST.Rows[i].Cells["ZNKFLG"].Value;
                         if (nmsl is DBNull)
                         {
-                            totalCount += 1;
+                            totalCount += Convert.ToInt32(GR_LIST.Rows[i].Cells["KOSU"].Value);
                             var bb = GR_LIST.Rows[i].Cells["WT"].Value;
                             totalWeight += Convert.ToDouble(bb);
                         }
@@ -498,12 +499,10 @@ namespace Mitsunori
                     label6.Text = totalCount.ToString();
                     label7.Text = totalWeight.ToString();
                 }
-                //Rectangle rect = GR_LIST.GetCellDisplayRectangle(1, -1, true);
-                //checkBox1.Location = rect.Location;
             }
             else
             {
-                MessageBox.Show("aa");
+                MessageBox.Show("Error");
 
             }
         }
@@ -521,8 +520,8 @@ namespace Mitsunori
                 bool APU = CH_APU.Checked;
 
                 bool Status1 = radioButton1.Checked;
-                bool Status2 = radioButton2.Checked;
-                bool Status3 = radioButton3.Checked;
+                bool Status2 = radioButton3.Checked;
+                bool Status3 = radioButton2.Checked;
                 bool Status4 = radioButton4.Checked;
                 bool Status5 = radioButton5.Checked;
                 bool Status6 = radioButton6.Checked;

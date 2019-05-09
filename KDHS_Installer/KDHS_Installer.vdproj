@@ -46,19 +46,19 @@
         "Entry"
         {
         "MsmKey" = "8:_7770047D8EB3ED44EA8FCEACE18ED47B"
-        "OwnerKey" = "8:_CD01B9A72FF6EDCDD96364BC2AF2D8E2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7770047D8EB3ED44EA8FCEACE18ED47B"
         "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_7770047D8EB3ED44EA8FCEACE18ED47B"
-        "OwnerKey" = "8:_8D392369AB8CF4F45E230DB81E534214"
+        "OwnerKey" = "8:_CE509EB65C3D2C592DB0FC553B59EA3D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7770047D8EB3ED44EA8FCEACE18ED47B"
+        "OwnerKey" = "8:_D77F642F5FEECEEDD54E0BF94C1B40EF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -69,25 +69,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_8D392369AB8CF4F45E230DB81E534214"
-        "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_A535B9E1CC0F45F588B6D65D554F558D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CD01B9A72FF6EDCDD96364BC2AF2D8E2"
-        "OwnerKey" = "8:_8D392369AB8CF4F45E230DB81E534214"
+        "MsmKey" = "8:_CE509EB65C3D2C592DB0FC553B59EA3D"
+        "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CD01B9A72FF6EDCDD96364BC2AF2D8E2"
+        "MsmKey" = "8:_D77F642F5FEECEEDD54E0BF94C1B40EF"
+        "OwnerKey" = "8:_CE509EB65C3D2C592DB0FC553B59EA3D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D77F642F5FEECEEDD54E0BF94C1B40EF"
         "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -112,19 +112,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CE509EB65C3D2C592DB0FC553B59EA3D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D77F642F5FEECEEDD54E0BF94C1B40EF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_109098756C36B220CF274C871B2CF700"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8D392369AB8CF4F45E230DB81E534214"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CD01B9A72FF6EDCDD96364BC2AF2D8E2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -370,11 +370,31 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8D392369AB8CF4F45E230DB81E534214"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A535B9E1CC0F45F588B6D65D554F558D"
+            {
+            "SourcePath" = "8:..\\Mitsunori\\bin\\x64\\Debug\\template\\集荷表.xlsx"
+            "TargetName" = "8:集荷表.xlsx"
+            "Tag" = "8:"
+            "Folder" = "8:_E372121CB8DC4AAE91C188825D510889"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CE509EB65C3D2C592DB0FC553B59EA3D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64"
+            "AssemblyAsmDisplayName" = "8:BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                 }
@@ -396,31 +416,11 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A535B9E1CC0F45F588B6D65D554F558D"
-            {
-            "SourcePath" = "8:..\\Mitsunori\\bin\\x64\\Debug\\template\\集荷表.xlsx"
-            "TargetName" = "8:集荷表.xlsx"
-            "Tag" = "8:"
-            "Folder" = "8:_E372121CB8DC4AAE91C188825D510889"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CD01B9A72FF6EDCDD96364BC2AF2D8E2"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D77F642F5FEECEEDD54E0BF94C1B40EF"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64"
+            "AssemblyAsmDisplayName" = "8:DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                 }
@@ -561,7 +561,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:KDHS"
         "ProductCode" = "8:{497236F9-EB3C-41E6-90BA-4E02555D5911}"
-        "PackageCode" = "8:{947B5A8E-EC73-4560-A984-02924211D4D4}"
+        "PackageCode" = "8:{E70B7C01-6B7F-464A-BDD8-B2ACD7211FBE}"
         "UpgradeCode" = "8:{D55179CF-DBF9-4E3D-B1F4-AAEB3599DB26}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -569,20 +569,20 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:VSC"
+        "Manufacturer" = "8:KDHS"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:KDHS_Installer"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Zhang"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:It destroys the world."
+        "ARPCOMMENTS" = "8:共同配送"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
-        "TargetPlatform" = "3:1"
+        "TargetPlatform" = "3:0"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
@@ -1096,7 +1096,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0C34EA13F1A440B6AB528D5F0D794F4A"
             {
-            "SourcePath" = "8:..\\Mitsunori\\obj\\x64\\Debug\\Mitsunori.exe"
+            "SourcePath" = "8:..\\Mitsunori\\obj\\x86\\Release\\Mitsunori.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_748BFAE08BFF415280E16F41499AE643"

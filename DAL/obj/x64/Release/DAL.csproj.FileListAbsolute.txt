@@ -1,0 +1,8 @@
+C:\Mitsunori\DAL\bin\x64\Release\DAL.dll
+C:\Mitsunori\DAL\bin\x64\Release\DAL.pdb
+C:\Mitsunori\DAL\bin\x64\Release\log4net.dll
+C:\Mitsunori\DAL\bin\x64\Release\log4net.xml
+C:\Mitsunori\DAL\obj\x64\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Mitsunori\DAL\obj\x64\Release\DAL.csproj.CopyComplete
+C:\Mitsunori\DAL\obj\x64\Release\DAL.dll
+C:\Mitsunori\DAL\obj\x64\Release\DAL.pdb

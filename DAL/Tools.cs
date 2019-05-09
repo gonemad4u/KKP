@@ -32,7 +32,7 @@ namespace DAL
         
         public static DataTable GetAreanm()
         {
-            var sql = "select areanm from M_AREA group by areanm";
+            var sql = "select areanm from M_AREA ma left join M_MNRCODE mm on ma.areacd = mm.code group by ma.areanm,nvl(mm.kbn1,'Z') order by nvl(mm.kbn1,'Z')";
             DEV10G2U dEV = new DEV10G2U();
             var dt = dEV.executeSelectQuery(sql);
             return dt;

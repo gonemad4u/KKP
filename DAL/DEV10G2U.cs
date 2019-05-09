@@ -79,7 +79,7 @@ namespace DAL
                 return dt;
             }
         }
-        //Alter the datatable to leave out all the duplicate rows, in case there are no dulicate return false
+        //Alter the datatable to leave out all the duplicate rows, in case there are no dulicate return the same datatable
         public DataTable alterDataTable(DataTable datatable)
         {
             for (int i = datatable.Rows.Count - 1; i >= 0; i--)

@@ -39,9 +39,10 @@ namespace BLL
                     var distinctIds = ds.AsEnumerable()
                      .Select(s => new
                      {
-                         area = s.Field<string>("AREANM"),
-                         soko = s.Field<string>("SOKONM"),
-                         nukn = s.Field<string>("NUKNNM"),
+                         area = s.Field<string>("AREANM") ,
+                         homen = s.Field<string>("HOMEN") ,
+                         //soko = s.Field<string>("SOKONM"),
+                         //nukn = s.Field<string>("NUKNNM"),
                          
                      })
                        .Distinct().ToList();
@@ -53,13 +54,13 @@ namespace BLL
                         {
                             string expression;
                             DataRow[] foundRows;
-                            expression = "AREANM = '" + a.area.ToString() + "' AND SOKONM = '" + a.soko.ToString() + "'" + " AND NUKNNM = '" + a.nukn.ToString() + "'";
+                            expression = "AREANM = '" + a.area.ToString() + "' AND HOMEN = '" + a.homen.ToString()  + "'";
 
                             foundRows = ds.Select(expression);
-                            worksheet.Name = foundRows[0][10] + "_" + foundRows[0][11] + "_" + foundRows[0][1];
+                            worksheet.Name = foundRows[0][11] + "_" + foundRows[0][10];
                             workbook.Worksheets[1].Name = workbook.Worksheets[1].Name.Split(' ')[0];
-                            worksheet.Cells[1, "H"] = foundRows[0][10];
-                            worksheet.Cells[1, "AD"] = foundRows[0][11];
+                            worksheet.Cells[1, "H"] = foundRows[0][11];
+                            worksheet.Cells[1, "AD"] = foundRows[0][10];
                             worksheet.Cells[5 , "B"] = foundRows[0][2];
                             worksheet.Cells[5 , "H"] = foundRows[0][5];
                             worksheet.Cells[5 , "N"] = foundRows[0][3];
@@ -68,7 +69,7 @@ namespace BLL
                             worksheet.Cells[5 , "AW"] = foundRows[0][7];
                             worksheet.Cells[5 , "BC"] = foundRows[0][8];
                             worksheet.Cells[5 , "BM"] = foundRows[0][9];
-                            worksheet.Cells[5 , "CD"] = foundRows[0][11];
+                            worksheet.Cells[5 , "CD"] = foundRows[0][12];
                             worksheet.Cells[5, "CN"] = "サイン";
 
                             for (int i = 0; i < foundRows.Length-1; i++)
@@ -85,7 +86,7 @@ namespace BLL
                                 worksheet.Cells[6 + i, "AW"] = foundRows[i + 1][7];
                                 worksheet.Cells[6 + i, "BC"] = foundRows[i + 1][8];
                                 worksheet.Cells[6 + i, "BM"] = foundRows[i + 1][9];
-                                worksheet.Cells[6 + i, "CD"] = foundRows[i + 1][11];
+                                worksheet.Cells[6 + i, "CD"] = foundRows[i + 1][12];
                                 worksheet.Cells[6 + i, "CN"] = "サイン";
                             }
                             no++;
@@ -104,12 +105,12 @@ namespace BLL
                         {
                             string expression;
                             DataRow[] foundRows;
-                            expression = "AREANM = '" + a.area.ToString() + "' AND SOKONM = '" + a.soko.ToString() + "'" + " AND NUKNNM = '" + a.nukn.ToString() + "'";
+                            expression = "AREANM = '" + a.area.ToString() + "' AND HOMEN = '" + a.homen.ToString() + "'";
                             foundRows = ds.Select(expression);
-                            worksheet.Name = foundRows[0][10] + "_" + foundRows[0][11] + "_" + foundRows[0][1];
+                            worksheet.Name = foundRows[0][11] + "_" + foundRows[0][10];
                             workbook.Worksheets[1].Name = workbook.Worksheets[1].Name.Split(' ')[0];
-                            worksheet.Cells[1, "H"] = foundRows[0][10];
-                            worksheet.Cells[1, "AD"] = foundRows[0][11];
+                            worksheet.Cells[1, "H"] = foundRows[0][11];
+                            worksheet.Cells[1, "AD"] = foundRows[0][10];
                             worksheet.Cells[5 , "B"] = foundRows[0][2];
                             worksheet.Cells[5 , "H"] = foundRows[0][5];
                             worksheet.Cells[5 , "N"] = foundRows[0][3];
@@ -118,7 +119,7 @@ namespace BLL
                             worksheet.Cells[5 , "AW"] = foundRows[0][7];
                             worksheet.Cells[5 , "BC"] = foundRows[0][8];
                             worksheet.Cells[5 , "BM"] = foundRows[0][9];
-                            worksheet.Cells[5 , "CD"] = foundRows[0][11];
+                            worksheet.Cells[5 , "CD"] = foundRows[0][12];
                             worksheet.Cells[5, "CN"] = "サイン";
 
                             for (int i = 1; i < foundRows.Length; i++)
@@ -136,7 +137,7 @@ namespace BLL
                                 worksheet.Cells[5 + i, "AW"] = foundRows[i][7];
                                 worksheet.Cells[5 + i, "BC"] = foundRows[i][8];
                                 worksheet.Cells[5 + i, "BM"] = foundRows[i][9];
-                                worksheet.Cells[5 + i, "CD"] = foundRows[i][11];
+                                worksheet.Cells[5 + i, "CD"] = foundRows[i][12];
                                 worksheet.Cells[5 + i, "CN"] = "サイン";
                             }
 
@@ -185,12 +186,12 @@ namespace BLL
                 sql.Append("T_KDHSINFO.KOSU,                         ");
                 sql.Append("T_KDHSINFO.WT,                           ");
                 sql.Append("T_KDHSINFO.BIKO,                         ");
-                sql.Append("AREA.AREANM,                           ");
+                sql.Append("AREA.Z HOMEN ,AREA.AREANM,                           ");
                 sql.Append("SOKO.SOKONM                            ");
                 sql.Append("FROM                                     ");
                 sql.Append("T_KDHSINFO                               ");
-                sql.Append("INNER JOIN    (SELECT DISTINCT AREACD, AREANM FROM M_AREA)AREA                       ");
-                sql.Append("ON   AREA.AREACD = T_KDHSINFO.AREACD   ");
+                sql.Append("INNER JOIN    (SELECT DISTINCT AREANM, NVL(HOMEN,'Z') Z, AREACD, TDFKNCD FROM M_AREA)AREA                       ");
+                sql.Append("ON   AREA.AREACD = T_KDHSINFO.AREACD  AND   AREA.TDFKNCD = SUBSTR(T_KDHSINFO.CHIKUCD,0,2)   ");
                 sql.Append("INNER JOIN  (SELECT DISTINCT SOKOCD, SOKONM FROM M_SOKO)SOKO                       ");
                 sql.Append("ON   SOKO.SOKOCD = T_KDHSINFO.IRIGSYCD ");
                 sql.Append("    WHERE                                ");

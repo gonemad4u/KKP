@@ -1,0 +1,12 @@
+C:\Mitsunori\BLL\bin\x64\Release\BLL.dll
+C:\Mitsunori\BLL\bin\x64\Release\BLL.pdb
+C:\Mitsunori\BLL\bin\x64\Release\DAL.dll
+C:\Mitsunori\BLL\bin\x64\Release\log4net.dll
+C:\Mitsunori\BLL\bin\x64\Release\DAL.pdb
+C:\Mitsunori\BLL\bin\x64\Release\log4net.xml
+C:\Mitsunori\BLL\obj\x64\Release\BLL.csprojAssemblyReference.cache
+C:\Mitsunori\BLL\obj\x64\Release\BLL.csproj.ResolveComReference.cache
+C:\Mitsunori\BLL\obj\x64\Release\BLL.csproj.CoreCompileInputs.cache
+C:\Mitsunori\BLL\obj\x64\Release\BLL.csproj.CopyComplete
+C:\Mitsunori\BLL\obj\x64\Release\BLL.dll
+C:\Mitsunori\BLL\obj\x64\Release\BLL.pdb
