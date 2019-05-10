@@ -91,6 +91,19 @@ namespace Mitsunori
             return intCount;
         }
 
+        //Check if ZNK exists
+        private bool ZNKCheck()
+        {
+            for (int i = 0; i < GR_LIST.RowCount; i++)
+            {
+                if (GR_LIST.Rows[i].Cells["ZNKFLG"].Value.ToString() == "Y" && (bool)GR_LIST.Rows[i].Cells[0].EditedFormattedValue == true)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         //check if there are multiple status selected
         private bool StatusCheck(string[] statusList)
         {
@@ -198,10 +211,9 @@ namespace Mitsunori
             if (GrdCheck() != 0 && StatusCheck(new string[] { "未処理", "集荷表", "集約" }) == true)
             {
                 DataGridView gr = GR_LIST;
-                bool ZanKa = CH_ZANKA.Checked;
-                if (ZanKa)
+                if (ZNKCheck())
                 {
-                    string mess = "選択したレコードは全て残貨対象のため処理できません。";
+                    string mess = "選択したレコードに残貨対象があるため処理できません。";
                     MessageBox.Show(mess, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
@@ -220,9 +232,7 @@ namespace Mitsunori
             if (GrdCheck() != 0 && StatusCheck(new string[] { "集荷表", "集約", "配送済", "運賃計算", "実績送信済" }) == true)
             {
                 DataGridView gr = GR_LIST;
-
-                bool ZanKa = CH_ZANKA.Checked;
-                if (ZanKa)
+                if (ZNKCheck())
                 {
                     string mess = "選択したレコードは全て残貨対象のため処理できません。";
                     MessageBox.Show(mess, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -238,11 +248,9 @@ namespace Mitsunori
         //Read Haiso info from oracle and output an excel file
         private void B_HAISODOWNLOAD_Click(object sender, EventArgs e)
         {
-            if (GrdCheck() != 0 && StatusCheck(new string[] { "集約", "配送済", "運賃計算", "実績送信済" }) == true)
+            if (GrdCheck() != 0 && StatusCheck(new string[] { "集荷表", "配送済", "運賃計算", "実績送信済" }) == true)
             {
-
-                bool ZanKa = CH_ZANKA.Checked;
-                if (ZanKa)
+                if (ZNKCheck())
                 {
                     string mess = "選択したレコードは全て残貨対象のため処理できません。";
                     MessageBox.Show(mess, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -282,8 +290,7 @@ namespace Mitsunori
         {
             if (GrdCheck() != 0 && StatusCheck(new string[] { "運賃計算", "実績送信済" }) == true)
             {
-                bool ZanKa = CH_ZANKA.Checked;
-                if (ZanKa)
+                if (ZNKCheck())
                 {
                     string mess = "選択したレコードは全て残貨対象のため処理できません。";
                     MessageBox.Show(mess, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

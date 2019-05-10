@@ -45,6 +45,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7407410A6B3C37F76FCA0C208C2D29AA"
+        "OwnerKey" = "8:_C89233857724F145AA1B6DF598388C19"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7407410A6B3C37F76FCA0C208C2D29AA"
+        "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7770047D8EB3ED44EA8FCEACE18ED47B"
         "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,13 +64,13 @@
         "Entry"
         {
         "MsmKey" = "8:_7770047D8EB3ED44EA8FCEACE18ED47B"
-        "OwnerKey" = "8:_CE509EB65C3D2C592DB0FC553B59EA3D"
+        "OwnerKey" = "8:_C89233857724F145AA1B6DF598388C19"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_7770047D8EB3ED44EA8FCEACE18ED47B"
-        "OwnerKey" = "8:_D77F642F5FEECEEDD54E0BF94C1B40EF"
+        "OwnerKey" = "8:_7407410A6B3C37F76FCA0C208C2D29AA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -75,19 +87,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CE509EB65C3D2C592DB0FC553B59EA3D"
-        "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D77F642F5FEECEEDD54E0BF94C1B40EF"
-        "OwnerKey" = "8:_CE509EB65C3D2C592DB0FC553B59EA3D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D77F642F5FEECEEDD54E0BF94C1B40EF"
+        "MsmKey" = "8:_C89233857724F145AA1B6DF598388C19"
         "OwnerKey" = "8:_0C34EA13F1A440B6AB528D5F0D794F4A"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -112,13 +112,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CE509EB65C3D2C592DB0FC553B59EA3D"
+        "OwnerKey" = "8:_C89233857724F145AA1B6DF598388C19"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D77F642F5FEECEEDD54E0BF94C1B40EF"
+        "OwnerKey" = "8:_7407410A6B3C37F76FCA0C208C2D29AA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -319,6 +319,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7407410A6B3C37F76FCA0C208C2D29AA"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64"
+                "ScatterAssemblies"
+                {
+                    "_7407410A6B3C37F76FCA0C208C2D29AA"
+                    {
+                    "Name" = "8:DAL.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:DAL.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_748BFAE08BFF415280E16F41499AE643"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7770047D8EB3ED44EA8FCEACE18ED47B"
             {
             "AssemblyRegister" = "3:1"
@@ -390,41 +421,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CE509EB65C3D2C592DB0FC553B59EA3D"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C89233857724F145AA1B6DF598388C19"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64"
                 "ScatterAssemblies"
                 {
+                    "_C89233857724F145AA1B6DF598388C19"
+                    {
+                    "Name" = "8:BLL.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:BLL.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_748BFAE08BFF415280E16F41499AE643"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D77F642F5FEECEEDD54E0BF94C1B40EF"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:DAL.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_748BFAE08BFF415280E16F41499AE643"
@@ -561,7 +571,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:KDHS"
         "ProductCode" = "8:{497236F9-EB3C-41E6-90BA-4E02555D5911}"
-        "PackageCode" = "8:{E70B7C01-6B7F-464A-BDD8-B2ACD7211FBE}"
+        "PackageCode" = "8:{650D89EE-3BB0-4E42-ABEA-B56A24F588DA}"
         "UpgradeCode" = "8:{D55179CF-DBF9-4E3D-B1F4-AAEB3599DB26}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

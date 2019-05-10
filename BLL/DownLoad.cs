@@ -247,12 +247,12 @@ namespace BLL
 
                 if (Status2)
                 {
-                    sqlWhere.Add("STATUS=" + '2');
+                    sqlWhere.Add("STATUS=" + '1');
                 }
 
                 if (Status3)
                 {
-                    sqlWhere.Add("STATUS=" + '1');
+                    sqlWhere.Add("STATUS=" + '2');
                 }
 
                 if (Status4)
